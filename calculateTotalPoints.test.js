@@ -41,15 +41,15 @@ describe('calculateTotalPoints', () => {
 
     describe('negative points for wind or gate', () => {
         it('should work without decimal points', () => {
-            const actual = calculateTotalPoints(226, 'flying', 151.2, [18.5, 18.5, 18.5, 18.0, 18.5], 8.7, 8.9);
+            const actual = calculateTotalPoints(226, 'flying', 200, [18.5, 18.5, 18.5, 18.0, 18.5], 8.7, 8.9);
 
-            const expected = 215.4;
+            const expected = 224.3;
 
             assert.equal(actual, expected);
         });
 
         it('should work with decimal points', () => {
-            const actual = calculateTotalPoints(226, 'flying', 151.2, [18.5, 18.5, 18.5, 18.0, 18.5], 8.7, -8.9);
+            const actual = calculateTotalPoints(226, 'flying', 200, [18.5, 18.5, 18.5, 18.0, 18.5], 8.7, -8.9);
 
             const expected = 206.5;
 
