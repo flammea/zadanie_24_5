@@ -48,23 +48,23 @@ describe('calculateDistancePoints', () => {
 
     describe('flying hill', () => {
         it('it should work for jump longer k-point', () => {
-            const actual = calculateDistancePoints(215, 'flying', 180);
+            const actual = calculateDistancePoints(215, 'flying', 200);
 
-            const expected = 162;
+            const expected = 218;
 
             assert.equal(actual, expected);
         });
 
         it('it should work for jump shorten than k-point', () => {
-            const actual = calculateDistancePoints(182, 'flying', 190);
+            const actual = calculateDistancePoints(185, 'flying', 200);
 
-            const expected = 110.4;
+            const expected = 182;
 
             assert.equal(actual, expected);
         });
 
         it('it should work for jump equal to k-point', () => {
-            const actual = calculateDistancePoints(185.5, 'flying', 185.5);
+            const actual = calculateDistancePoints(200, 'flying', 200);
 
             const expected = 120;
 
