@@ -41,7 +41,7 @@ describe('calculateTotalPoints', () => {
 
     describe('negative points for wind or gate', () => {
         it('should work without decimal points', () => {
-            const actual = calculateTotalPoints(226, 'flying', 120, [18.5, 18.5, 18.5, 18.0, 18.5], 8.7, 8.9);
+            const actual = calculateTotalPoints(226, 'flying', 151.2, [18.5, 18.5, 18.5, 18.0, 18.5], 8.7, 8.9);
 
             const expected = 215.4;
 
@@ -49,7 +49,7 @@ describe('calculateTotalPoints', () => {
         });
 
         it('should work with decimal points', () => {
-            const actual = calculateTotalPoints(226, 'flying', 120, [18.5, 18.5, 18.5, 18.0, 18.5], 8.7, -8.9);
+            const actual = calculateTotalPoints(226, 'flying', 151.2, [18.5, 18.5, 18.5, 18.0, 18.5], 8.7, -8.9);
 
             const expected = 206.5;
 

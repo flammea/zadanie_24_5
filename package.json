@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha index.test.js",
+    "test": "mocha *.test.js",
     "test:watch": "onchange \"./*.js\" -- npm test"
   },
   "keywords": [],
@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "onchange": "^4.0.0"
   }
 }
